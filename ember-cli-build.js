@@ -5,12 +5,6 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
-  // app.import('vendor/custom-min.js');
-  // app.import('vendor/plugin-min.js');
-  app.import('vendor/jquery-2.1.1.min.js');
-  app.import('vendor/modernizr.js');
-  app.import('vendor/materialize.min.js');
-  app.import('vendor/init.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
