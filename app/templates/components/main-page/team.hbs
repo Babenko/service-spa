@@ -1,0 +1,35 @@
+<!--Team-->
+<div class="section scrollspy" id="team">
+  <div class="container">
+    <h2 class="header text_b"> {{team.title}} </h2>
+    <div class="row">
+      {{#each team.members as |member|}}
+        <div class="col s12 m3">
+          <div class="card card-avatar">
+            <div class="waves-effect waves-block waves-light">
+              <img class="activator" src="{{member.img}}">
+            </div>
+            <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{member.name}} <br/>
+                            <small><em><a class="red-text text-darken-1" href="#">{{member.position}}</a></em></small></span>
+              <p>
+                <a class="blue-text text-lighten-2" href="https://www.facebook.com/">
+                  <i class="fa fa-facebook-square"></i>
+                </a>
+                <a class="blue-text text-lighten-2" href="https://twitter.com/">
+                  <i class="fa fa-twitter-square"></i>
+                </a>
+                <a class="blue-text text-lighten-2" href="https://plus.google.com/">
+                  <i class="fa fa-google-plus-square"></i>
+                </a>
+                <a class="blue-text text-lighten-2" href="https://www.linkedin.com/">
+                  <i class="fa fa-linkedin-square"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
