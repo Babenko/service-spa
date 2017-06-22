@@ -1,2 +1,5 @@
-<h1>Admin</h1>
-{{outlet}}
+{{admin-page model=model}}
+<input type="button" value="sign out" {{action "signOut" on="click"}}/>
+
+{{input type="text" value=newTitle}}
+<input type="button" value="pressme" {{action "saveTitle" newTitle on="click"}}>
