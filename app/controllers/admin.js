@@ -7,10 +7,8 @@ export default Ember.Controller.extend({
       this.get('session').close();
     },
 
-    saveTitle(newTitle) {
-      this.get('model').set("title", newTitle);
+    saveModel() {
       this.get('model').save();
-      console.log("save");
     }
   }
 });
