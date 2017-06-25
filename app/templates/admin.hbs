@@ -1,5 +1,63 @@
-
-<input type="button" value="sign out" {{action "signOut" on="click"}}/>
-
-{{input type="text" value=newTitle}}
-<input type="button" value="pressme" {{action "saveTitle" newTitle on="click"}}>
+<style>
+  nav{
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    -moz-transition:all 200ms ease-in;
+    -webkit-transition:all 200ms ease-in;
+    -o-transition:all 200ms ease-in;
+    transition:all 200ms ease-in;
+    float:left;
+  }
+  nav ul{
+    width:250px;
+    height:100%;
+    padding:0;
+    margin:0;
+    list-style:none;
+    background:#222;
+    overflow:hidden;
+  }
+  nav li{
+    margin:0;
+    float:none !important;
+  }
+  nav a{
+    color:#fff;
+    font-size:1em;
+    font-family:'helvetica neue', helvetica, arial, sans-serif;
+    text-decoration:none;
+    display:block;
+    padding:12px 15px;
+    font-weight:300;
+    letter-spacing:2px;
+    border-bottom:1px solid #333;
+  }
+  nav a:hover{
+    background:#111;
+  }
+</style>
+<nav>
+  <ul>
+    <li>
+      {{#link-to "admin.navigation"}}Navigation{{/link-to}}
+    </li>
+    <li>
+      <a href="">Hero {{model.title}} </a>
+    </li>
+    <li>
+      <a href="">Intro and service</a>
+    </li>
+    <li>
+      <a href="">Work</a>
+    </li>
+    <li>
+      <a href="">Contact</a>
+    </li>
+  </ul>
+</nav>
+<div class="section">
+  {{outlet}}
+</div>
+<input type="button" value="Save" {{action 'saveModel' on='click'}}>
