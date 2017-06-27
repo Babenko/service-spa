@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     signIn() {
-      const self = this;
+      console.log(this.get('session'))
       const LOGIN = this.get("login");
       const PASSWORD = this.get("password");
       const SESSION = this.get('session')
