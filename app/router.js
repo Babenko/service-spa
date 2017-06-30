@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('admin', function() {
     this.route('navigation');
     this.route('hero');
+    this.route('service');
+    this.route('work');
   });
   this.route('main', { path: '/' });
   this.route('login');
