@@ -1,0 +1,17 @@
+<ul class="section-fields">
+  <li>
+    <ul>
+      {{#each model.work.examples as |example|}}
+        <li>
+          <span>Description</span>{{input type="text" value=example.description}}
+          <span>Title</span>{{input type="text" value=example.title}}
+          <span><img src="/{{example.img}}" height="100" width="100"></span>
+          <span>{{file-upload url="/img"}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </li>
+  <li>
+    <input type="button" value="add" {{action "newExample" on="click"}}>
+  </li>
+</ul>

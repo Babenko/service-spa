@@ -1,0 +1,17 @@
+<ul class="section-fields">
+  <li>
+    <span>Title</span>{{input type="text" value=model.service.title}}
+  </li>
+  <li><span>----------------------------</span></li>
+  <li>
+    <ul>
+      {{#each model.service.features as |feature|}}
+        <li>
+          <span>Description</span>{{input type="text" value=feature.description}}
+          <span>Title</span>{{input type="text" value=feature.title}}
+          <span><i class="{{feature.icon}}"></i></span>
+        </li>
+      {{/each}}
+    </ul>
+  </li>
+</ul>
