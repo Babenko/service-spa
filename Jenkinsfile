@@ -6,10 +6,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('node_modules') {
-                  deleteDir()
-                }
-                sh "npm --version"
                 sh "npm install"
                 sh "ember build --environment production"
             }
@@ -22,6 +18,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                dir('node_modules') {
+                  deleteDir()
+                }
             }
         }
     }
