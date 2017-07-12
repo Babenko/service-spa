@@ -9,7 +9,6 @@ pipeline {
                 dir('node_modules') {
                   deleteDir()
                 }
-                echo 'Building...'
                 sh "npm --version"
                 sh "sudo npm install"
                 sh "sudo ember build --environment production"
