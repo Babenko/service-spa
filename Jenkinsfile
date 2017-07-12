@@ -6,6 +6,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                dir('node_modules') {
+                  deleteDir()
+                }
                 echo 'Building...'
                 sh "npm --version"
                 sh "sudo npm install"
