@@ -8,7 +8,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh "npm --version"
-                sh "ember build --environment production"
+                sh "sudo npm install"
+                sh "sudo ember build --environment production"
             }
         }
         stage('Test') {
