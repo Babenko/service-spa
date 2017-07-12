@@ -10,8 +10,8 @@ pipeline {
                   deleteDir()
                 }
                 sh "npm --version"
-                sh "sudo npm install"
-                sh "sudo ember build --environment production"
+                sh "npm install"
+                sh "ember build --environment production"
             }
         }
         stage('Test') {
