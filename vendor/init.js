@@ -1,6 +1,6 @@
-var scheduleHandler = setTimeout(function(){
+var scheduleHandler = setInterval(function(){
   if(document.querySelector("#contact")) {
-    clearTimeout(scheduleHandler);
+    clearInterval(scheduleHandler);
     (function ($) {
       $(function () {
         $('.button-collapse').sideNav();
