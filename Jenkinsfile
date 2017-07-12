@@ -21,6 +21,9 @@ pipeline {
                 dir('node_modules') {
                   deleteDir()
                 }
+                dir('tmp') {
+                  deleteDir()
+                }
             }
         }
     }
