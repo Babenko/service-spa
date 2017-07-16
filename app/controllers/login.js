@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
       console.log(this.get('session'))
       const LOGIN = this.get("login");
       const PASSWORD = this.get("password");
-      const SESSION = this.get('session')
+      this.get('session')
         .open('firebase', { provider: 'password', email: LOGIN, password: PASSWORD})
         .then((e) => this.transitionToRoute("/admin"));
     }
