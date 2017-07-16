@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "rm -rf ./dist"
+                sh "rm -rf ./dist/*"
                 sh "npm install"
                 sh "ember build --environment production"
             }
