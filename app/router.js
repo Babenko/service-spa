@@ -12,6 +12,8 @@ Router.map(function() {
     this.route('hero');
     this.route('service');
     this.route('work');
+    this.route('team');
+    this.route('contacts');
   });
   this.route('main', { path: '/' });
   this.route('login');
