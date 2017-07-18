@@ -1,1 +1,17 @@
-team
+<ul class="section-fields">
+  <li>
+    <span>Title</span>{{input type="text" value=model.team.title}}
+  </li>
+  <li><span>----------------------------</span></li>
+  <li>
+    <ul>
+      {{#each model.team.members as |member|}}
+        <li>
+          <span>Name</span>{{input type="text" value=member.name}}
+          <span>Position</span>{{input type="text" value=member.position}}
+          <span><i class="{{member.icon}}"></i></span>
+        </li>
+      {{/each}}
+    </ul>
+  </li>
+</ul>
