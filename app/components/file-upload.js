@@ -18,8 +18,9 @@ export default EmberUploader.FileField.extend({
     }
 
     uploader.on('didUpload', response => {
-      console.log("did", Ember.$(response).find('Location')[0].textContent);
+      console.log("did", response);
       console.log(this.get("img"))
+      this.set("img", response);
     });
   }
 });
