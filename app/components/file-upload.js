@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import EmberUploader from 'ember-uploader';
 
 export default EmberUploader.FileField.extend({
   filesDidChange: function(files) {
@@ -13,6 +13,7 @@ export default EmberUploader.FileField.extend({
 
     uploader.on('didUpload', e => {
       console.log(e);
+      console.log(this.get("img"))
     });
   }
 });

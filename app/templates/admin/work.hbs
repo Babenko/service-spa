@@ -6,7 +6,7 @@
           <span>Description</span>{{input type="text" value=example.description}}
           <span>Title</span>{{input type="text" value=example.title}}
           <span><img src="/{{example.img}}" height="100" width="100"></span>
-          <span>{{file-upload url="/upload"}}</span>
+          <span>{{file-upload url="/upload" img=example.img}}</span>
         </li>
       {{/each}}
     </ul>
